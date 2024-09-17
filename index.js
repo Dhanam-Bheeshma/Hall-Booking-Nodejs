@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 4000;
-/ Define a route for the root URL ("/")
+// Define a route for the root URL ("/")
 app.get("/", (req, res) => {
   res.status(200).send(
     `<div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
