@@ -10,6 +10,22 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 4000;
+/ Define a route for the root URL ("/")
+app.get("/", (req, res) => {
+  res.status(200).send(
+    `<div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+      <h1>Welcome to the Room Booking API</h1>
+      <p>Create a room: <b>"/rooms/createroom"</b></p>
+      <p>Get all rooms: <b>"/rooms/getrooms"</b></p>
+      <p>Book a room: <b>"/bookings/bookroom"</b></p>
+      <p>List all customers with bookings: <b>"/bookings/customers"</b></p>
+    </div>`
+  );
+});
+
+
+
+
 
 // Replace <username>, <password>, <dbname> with your MongoDB Atlas credentials
 const uri = process.env.MONGO_URI || "mongodb+srv://dhanamveera:dhana123@cluster0.g123d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
