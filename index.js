@@ -12,7 +12,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 4000;
 
 // Replace <username>, <password>, <dbname> with your MongoDB Atlas credentials
-const uri = process.env.MONGO_URI || "mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const uri = process.env.MONGO_URI || "mongodb+srv://dhanamveera:dhana123@cluster0.g123d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
